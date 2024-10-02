@@ -1,0 +1,73 @@
+/* Geral */
+body {
+    font-family: 'Comic Neue', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #6423a0;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center; /* Centraliza o texto */
+}
+
+.nav-menu {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Permite quebra em dispositivos menores */
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Centraliza os produtos */
+}
+
+/* Ajustes para produtos */
+.product {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+    flex: 1 1 calc(25% - 20px); /* 4 produtos por linha */
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .product {
+        flex: 1 1 calc(33.33% - 20px); /* 3 produtos por linha */
+    }
+
+    .search-bar input {
+        width: calc(100% - 46px);
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        text-align: center;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 10px;
+        margin: 0;
+    }
+
+    .product {
+        flex: 1 1 calc(50% - 20px); /* 2 produtos por linha */
+    }
+
+    .slider {
+        max-height: 200px;
+    }
+}
